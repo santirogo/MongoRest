@@ -29,6 +29,14 @@
 	<url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>com.ezakus.api.web.security.CORSFilter</filter-class>
+    </filter>
 
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 </web-app>
