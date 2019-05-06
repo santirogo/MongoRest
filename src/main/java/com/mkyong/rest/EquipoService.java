@@ -31,29 +31,6 @@ import org.o7planning.restfulcrud.model.Equipo;
 @Path("/equipo")
 public class EquipoService {
     
-    
-    
-    // URI:
-    // /contextPath/servletPath/employees
-//    @GET
-//    @Produces({ MediaType.APPLICATION_JSON })
-//    public List<Equipo> getEquipos() {
-//        List<Equipo> equipos = new ArrayList();
-//        
-//        Equipo eq1 = new Equipo();
-//        eq1.setId("1");
-//        eq1.setNombre("Millos");
-//        
-//        Equipo eq2 = new Equipo();
-//        eq2.setId("2");
-//        eq2.setNombre("Nacional");
-//        
-//        equipos.add(eq1);
-//        equipos.add(eq2);
-//        
-//        return equipos;
-//    }
-    
     // URI:
     // /contextPath/servletPath/employees
     @GET
@@ -61,15 +38,6 @@ public class EquipoService {
     public List<Equipo> getEquipos_JSON() {
         List<Equipo> equipos = EquipoDAO.getAllEquipos();
         return equipos;
-    }
- 
-    // URI:
-    // /contextPath/servletPath/employees/{empNo}
-    @GET
-    @Path("/{empNo}")
-    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-    public Equipo getEquipo(@PathParam("empNo") String empNo) {
-        return EquipoDAO.getEquipo(empNo);
     }
  
     // URI:
